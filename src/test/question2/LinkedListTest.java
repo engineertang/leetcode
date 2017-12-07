@@ -29,9 +29,9 @@ public void testAddTwoSum() throws Exception {
     LinkedList linkedList = new LinkedList();
     ListNode listNode3 = linkedList.addTwoSum(listNode1, listNode2);
 
-    while (null != listNode3.getNext()){
-        ListNode cur = listNode3.getNext();
-        System.out.print(cur.getValue());
+    while(null != listNode3){
+        System.out.print(listNode3.getValue());
+        listNode3 = listNode3.getNext();
     }
 } 
 
