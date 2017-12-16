@@ -1,9 +1,6 @@
-package test.Question21; 
+package Question21;
 
-import Question21.MergeLinkedList;
 import org.junit.Test;
-import org.junit.Before; 
-import org.junit.After;
 import question2.ListNode;
 
 /** 

@@ -1,9 +1,6 @@
-package test.question9; 
+package question9;
 
-import org.junit.Test; 
-import org.junit.Before; 
-import org.junit.After;
-import question9.PalindromeNumber;
+import org.junit.Test;
 
 /** 
 * PalindromeNumber Tester. 

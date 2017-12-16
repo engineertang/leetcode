@@ -1,8 +1,6 @@
-package test.question2; 
+package question2;
 
 import org.junit.Test;
-import question2.LinkedList;
-import question2.ListNode;
 
 /** 
 * LinkedList Tester. 

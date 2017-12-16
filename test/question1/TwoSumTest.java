@@ -1,9 +1,6 @@
-package test.question1; 
+package question1;
 
-import org.junit.Test; 
-import org.junit.Before;
-import org.junit.After;
-import question1.TwoSum;
+import org.junit.Test;
 
 /**
 * TwoSum Tester.
