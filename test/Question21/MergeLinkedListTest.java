@@ -1,4 +1,4 @@
-package Question21;
+package question21;
 
 import org.junit.Test;
 import question2.ListNode;

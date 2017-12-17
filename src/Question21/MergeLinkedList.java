@@ -1,9 +1,6 @@
-package Question21;
+package question21;
 
 import question2.ListNode;
-
-import java.util.LinkedList;
-import java.util.ListIterator;
 
 /**
  * Created by Administrator on 2017/12/7.
