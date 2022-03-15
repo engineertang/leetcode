@@ -46,6 +46,6 @@ public class TwoSum {
             }
         }
 
-        throw  new IllegalArgumentException("can't get correct result");
+        throw new IllegalArgumentException("can't get correct result");
     }
 }

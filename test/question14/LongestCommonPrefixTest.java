@@ -31,6 +31,6 @@ public void testGetLongestCommonPrefix() throws Exception {
 
 
 public static Test suite() { 
-return new TestSuite(LongestCommonPrefixTest.class); 
+    return new TestSuite(LongestCommonPrefixTest.class);
 } 
 } 
