@@ -1,7 +1,7 @@
 package question21;
 
 import org.junit.Test;
-import question2.ListNode;
+import linkedList.question2.ListNode;
 
 /** 
 * MergeLinkedList Tester. 

@@ -23,8 +23,8 @@ public class PascalTriangleTest {
 public void testGetRow() throws Exception {
     PascalTriangle p = new PascalTriangle();
     List result = p.getRow(4);
-    for(int i = 0; i < result.size(); i++){
-        System.out.print(result.get(i) + " ");
+    for (Object o : result) {
+        System.out.print(o + " ");
     }
 } 
 

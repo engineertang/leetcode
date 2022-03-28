@@ -1,8 +1,6 @@
 package array.question15;
 
-import junit.framework.TestCase;
 import org.junit.Test;
-import question1.TwoSum;
 
 public class SumOf3Test {
     @Test

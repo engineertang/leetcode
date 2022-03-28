@@ -1,4 +1,4 @@
-package question2;
+package linkedList.question2;
 
 /**
  * Created by Administrator on 2017/12/6.
@@ -8,7 +8,9 @@ public class ListNode {
     int value;
     ListNode next;
     public ListNode(){};
-    public ListNode(int x){ value = x;}
+    public ListNode(int x){
+        this.value = x;
+    }
 
     public ListNode getNext() {
         return next;

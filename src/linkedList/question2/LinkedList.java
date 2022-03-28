@@ -1,4 +1,4 @@
-package question2;
+package linkedList.question2;
 
 /**
  * Created by Administrator on 2017/12/6.

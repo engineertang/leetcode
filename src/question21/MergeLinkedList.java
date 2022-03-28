@@ -1,6 +1,6 @@
 package question21;
 
-import question2.ListNode;
+import linkedList.question2.ListNode;
 
 /**
  * Created by Administrator on 2017/12/7.

@@ -1,12 +1,13 @@
 package question1;
 
+import array.question1.TwoSum;
 import org.junit.Test;
 
 /**
 * TwoSum Tester.
 *
 * @author <Authors name>
-* @since <pre>ʮ���� 6, 2017</pre>
+* @since <pre>12/06/2017</pre>
 * @version 1.0
 */
 public class TwoSumTest {
