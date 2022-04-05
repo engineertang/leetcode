@@ -2,6 +2,7 @@ package linkedList.question2;
 
 /**
  * Created by Administrator on 2017/12/6.
+ * 链表相加
  */
 public class LinkedList {
 

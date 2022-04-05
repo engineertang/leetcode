@@ -1,21 +1,21 @@
-package array.question21;
+package linkedList.question21;
 
 public class MergeTwoSortedList {
     // two pointer,  linkedList的插入操作, iterative 迭代
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        if(list1 == null && list2==null)
+        if (list1 == null && list2 == null)
             return null;
         ListNode result = new ListNode();
         ListNode cur = result;
-        while(list1 != null && list2 != null){
-            if(list1.val <= list2.val){
+        while (list1 != null && list2 != null) {
+            if (list1.val <= list2.val) {
                 cur.val = list1.val;
                 cur.next = new ListNode();
 
                 cur = cur.next;
 
                 list1 = list1.next;
-            }else{
+            } else {
                 //把list2插到list1前面
                 cur.val = list2.val;
                 cur.next = new ListNode();
@@ -25,18 +25,18 @@ public class MergeTwoSortedList {
             }
         }
 
-        while(list1 == null && list2 != null) {
+        while (list1 == null && list2 != null) {
             cur.val = list2.val;
-            if(list2.next != null){
+            if (list2.next != null) {
                 cur.next = new ListNode();
                 cur = cur.next;
             }
             list2 = list2.next;
         }
 
-        while(list1 != null) {
+        while (list1 != null) {
             cur.val = list1.val;
-            if(list1.next != null){
+            if (list1.next != null) {
                 cur.next = new ListNode();
                 cur = cur.next;
             }
@@ -63,20 +63,20 @@ public class MergeTwoSortedList {
           merge(null, list2) return list2;
         */
 
-    //accursion递归
+    //recursion递归
     public static ListNode merge(ListNode list1, ListNode list2) {
-        if(list2 == null)
+        if (list2 == null)
             return list1;
-        if(list1 == null)
+        if (list1 == null)
             return list2;
 
         ListNode current = new ListNode();
-        if(list1.val <= list2.val){
+        if (list1.val <= list2.val) {
             current.val = list1.val;
             current.next = merge(list1.next, list2);
         }
 
-       if( list1.val > list2.val) {
+        if (list1.val > list2.val) {
             current.val = list2.val;
             current.next = merge(list1, list2.next);
         }
@@ -101,9 +101,10 @@ public class MergeTwoSortedList {
         do {
             System.out.println(result.val);
             result = result.next;
-        }while (result != null);
+        } while (result != null);
     }
 }
+
 
 class ListNode {
     int val;
@@ -111,7 +112,11 @@ class ListNode {
 
     ListNode() {
     }
-    ListNode(int val) { this.val = val; }
+
+    ListNode(int val) {
+        this.val = val;
+    }
+
     ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;

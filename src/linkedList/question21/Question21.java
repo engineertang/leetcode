@@ -1,11 +1,11 @@
-package question21;
+package linkedList.question21;
 
 import linkedList.question2.ListNode;
 
 /**
  * Created by Administrator on 2017/12/7.
  */
-public class MergeLinkedList {
+public class Question21 {
     /*public LinkedList merge(LinkedList l1, LinkedList l2){
         ListIterator<Integer> iterator1 = l1.listIterator();
         ListIterator<Integer> iterator2 = l2.listIterator();
@@ -17,6 +17,7 @@ public class MergeLinkedList {
             iterator1.next()
     }*/
 
+    //分而治之   递归
     public ListNode merge2(ListNode l1, ListNode l2){
         if(null != l1 && null == l2) {
             return l1;
