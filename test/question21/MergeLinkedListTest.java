@@ -1,7 +1,8 @@
 package question21;
 
+import linkedList.ListNode;
+import linkedList.question21.Question21;
 import org.junit.Test;
-import linkedList.question2.ListNode;
 
 /** 
 * MergeLinkedList Tester. 
@@ -12,11 +13,6 @@ import linkedList.question2.ListNode;
 */ 
 public class MergeLinkedListTest {
 
-/** 
-* 
-* Method: merge2(ListNode l1, ListNode l2) 
-* 
-*/ 
 @Test
 public void testMerge2() throws Exception {
     ListNode listNode1 = new ListNode(2);
@@ -25,11 +21,11 @@ public void testMerge2() throws Exception {
     ListNode listNode2 = new ListNode(5);
     listNode2.setNext(new ListNode(8));
 
-    MergeLinkedList mergeLinkedList= new MergeLinkedList();
+    Question21 mergeLinkedList= new Question21();
     ListNode listNode3 = mergeLinkedList.merge2(listNode1, listNode2);
 
     while(null != listNode3){
-        System.out.print(listNode3.getValue());
+        System.out.print(listNode3.getVal());
         listNode3 = listNode3.getNext();
     }
 } 

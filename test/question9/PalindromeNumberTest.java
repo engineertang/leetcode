@@ -1,6 +1,7 @@
 package question9;
 
 import org.junit.Test;
+import string.question9.PalindromeNumber;
 
 /** 
 * PalindromeNumber Tester. 

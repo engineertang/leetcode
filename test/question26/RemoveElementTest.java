@@ -1,8 +1,7 @@
 package question26;
 
-import org.junit.Test; 
-import org.junit.Before; 
-import org.junit.After; 
+import array.question26.RemoveElement;
+import org.junit.Test;
 
 /** 
 * RemoveElement Tester. 

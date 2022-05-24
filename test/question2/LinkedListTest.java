@@ -1,7 +1,7 @@
 package question2;
 
+import linkedList.ListNode;
 import linkedList.question2.LinkedList;
-import linkedList.question2.ListNode;
 import org.junit.Test;
 
 /** 
@@ -13,11 +13,6 @@ import org.junit.Test;
 */ 
 public class LinkedListTest { 
 
-/** 
-* 
-* Method: addTwoSum(ListNode list1, ListNode list2) 
-* 
-*/ 
 @Test
 public void testAddTwoSum() throws Exception {
     ListNode listNode1 = new ListNode(2);
@@ -30,7 +25,7 @@ public void testAddTwoSum() throws Exception {
     ListNode listNode3 = linkedList.addTwoSum(listNode1, listNode2);
 
     while(null != listNode3){
-        System.out.print(listNode3.getValue());
+        System.out.print(listNode3.getVal());
         listNode3 = listNode3.getNext();
     }
 } 
