@@ -19,15 +19,13 @@ public class RemoveElement {
 //        return pointer;
 
 
-
-
         //Fast & Short Java Solution   two pointer
         int slow = 0;
-        for (int fast = 0 ; fast < nums.length; fast++){
-            if(nums[fast] != val) {
+        for (int fast = 0; fast < nums.length; fast++) {
+            if (nums[fast] != val) {
                 nums[slow] = nums[fast];
-                slow ++;
-            }else {
+                slow++;
+            } else {
                 continue;
             }
         }
@@ -40,8 +38,8 @@ public class RemoveElement {
         for (int i = 0; i < arr.length; i++) {
             map.put(arr[i], i);
             int multi = arr[i] * 2;
-            int half = arr[i]%2 == 0 ? arr[i]/2 : 1001;
-            if(map.containsKey(multi) || map.containsKey(half)){
+            int half = arr[i] % 2 == 0 ? arr[i] / 2 : 1001;
+            if (map.containsKey(multi) || map.containsKey(half)) {
                 result = true;
                 break;
             }
@@ -50,19 +48,19 @@ public class RemoveElement {
     }
 
     public static boolean validMountainArray(int[] arr) {
-        if(arr.length < 3)
+        if (arr.length < 3)
             return false;
         int i = 0;
-        while (arr[i] < arr[i+1] && i < arr.length -2){
+        while (arr[i] < arr[i + 1] && i < arr.length - 2) {
             i++;
         }
         int top = i;
-        if(i==0)
+        if (i == 0)
             return false;
-        while (i < arr.length-1  && arr[i] > arr[i+1]){
+        while (i < arr.length - 1 && arr[i] > arr[i + 1]) {
             i++;
         }
-        return i == arr.length-1;
+        return i == arr.length - 1;
     }
 
 
@@ -81,7 +79,7 @@ public class RemoveElement {
 //        }
 
 
-        int[] arrs = {9,8,7,6,5,4,3,2,1,0};
+        int[] arrs = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
         boolean result = validMountainArray(arrs);
         System.out.println(result);
     }

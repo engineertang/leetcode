@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class MajorityElement {
     public int majorityElement(int[] nums) {
         Map<Integer, Integer> map = new HashMap();
-        for (int i : nums){
+        for (int i : nums) {
             map.put(i, (map.containsKey(i) ? (map.get(i) + 1) : 1));
         }
 
@@ -27,10 +27,10 @@ public class MajorityElement {
         int count = 0;
         int candidate = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (count == 0){
+            if (count == 0) {
                 candidate = nums[i];
                 count++;
-            }else if(candidate == nums[i])
+            } else if (candidate == nums[i])
                 count++;
             else
                 count--;
