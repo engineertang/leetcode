@@ -1,7 +1,8 @@
-package question14;
+package string.question14;
 
 /**
  * Created by Administrator on 2017/12/17.
+ * 循环遍历
  */
 public class LongestCommonPrefix {
     public String getLongestCommonPrefix(String[] strs) {
