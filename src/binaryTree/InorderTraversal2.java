@@ -21,9 +21,9 @@ public class InorderTraversal2 {
             TreeNode tmp = stack.pop();
             result.add(tmp.val);
 
-            if (tmp.right == null) {
-
-            } else if (tmp.right != null)  {
+            /*if (tmp.right == null) {
+            } else */
+            if (tmp.right != null)  {
                 TreeNode current = tmp.right;
                 while (current != null) {
                     stack.push(current);
@@ -31,27 +31,6 @@ public class InorderTraversal2 {
                 }
             }
 
-        }
-        return result;
-    }
-
-    public List<Integer> preorderTraversal(TreeNode root) {
-        Deque<TreeNode> stack = new LinkedList<TreeNode>();
-        List<Integer> result = new ArrayList<>();
-        if (root == null){
-            return result;
-        }
-        stack.push(root);
-        while (stack.size() != 0){
-            TreeNode tmp = stack.pop();
-            result.add(tmp.val);
-
-            if (tmp.right != null){
-                stack.push(tmp.right);
-            }
-            if (tmp.left != null){
-                stack.push(tmp.left);
-            }
         }
         return result;
     }

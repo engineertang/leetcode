@@ -1,6 +1,7 @@
 package binaryTree;
 
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Consumer;
@@ -26,6 +27,27 @@ public class PreorderTraversal {
             }
         }
         return list;
+    }
+
+    public List<Integer> preorderTraversal2(TreeNode root) {
+        Deque<TreeNode> stack = new LinkedList<TreeNode>();
+        List<Integer> result = new ArrayList<>();
+        if (root == null){
+            return result;
+        }
+        stack.push(root);
+        while (stack.size() != 0){
+            TreeNode tmp = stack.pop();
+            result.add(tmp.val);
+
+            if (tmp.right != null){
+                stack.push(tmp.right);
+            }
+            if (tmp.left != null){
+                stack.push(tmp.left);
+            }
+        }
+        return result;
     }
 
     public static void main(String[] args) {
