@@ -1,6 +1,6 @@
 package linkedList.question21;
 
-import linkedList.question2.ListNode;
+import linkedList.ListNode;
 
 /**
  * Created by Administrator on 2017/12/7.
@@ -18,20 +18,20 @@ public class Question21 {
     }*/
 
     //分而治之   递归
-    public ListNode merge2(ListNode l1, ListNode l2){
-        if(null != l1 && null == l2) {
+    public ListNode merge2(ListNode l1, ListNode l2) {
+        if (null != l1 && null == l2) {
             return l1;
         }
-        if(null == l1 && null != l2){
+        if (null == l1 && null != l2) {
             return l2;
         }
-        if(null == l1 && null == l2){
+        if (null == l1 && null == l2) {
             return null;
         }
-        if(l1.getValue() <= l2.getValue()){
+        if (l1.getVal() <= l2.getVal()) {
             l1.setNext(merge2(l1.getNext(), l2));
             return l1;
-        }else if(l1.getValue() > l2.getValue()){
+        } else if (l1.getVal() > l2.getVal()) {
             l2.setNext(merge2(l1, l2.getNext()));
             return l2;
         }

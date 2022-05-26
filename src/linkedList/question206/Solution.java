@@ -1,18 +1,20 @@
 package linkedList.question206;
 
+import linkedList.ListNode;
+
 import java.util.Stack;
 
 public class Solution {
-    // 用栈数据结构 反转链表
+    // 方法一：用栈数据结构 反转链表
     public ListNode reverseList(ListNode head) {
         Stack<ListNode> stack = new Stack<ListNode>();
-        while(head != null) {
+        while (head != null) {
             stack.push(head);
             head = head.next;
         }
         ListNode result = new ListNode();
         ListNode cur = result;
-        while(!stack.isEmpty()){
+        while (!stack.isEmpty()) {
             cur.next = stack.pop();
             cur = cur.next;
             cur.next = null;
@@ -20,21 +22,15 @@ public class Solution {
         return result.next;
     }
 
-    //递归  In-place iterative and recursive Java solution
-    //什么是递归 难理解
-    public ListNode recursionReverseList(ListNode head) {
-        return null;
-    }
-
-    // 迭代 iterative 双指针
+    //  方法二：迭代 iterative 双指针
     public ListNode iterate(ListNode head) {
-        if (head == null || head.next ==null){
+        if (head == null || head.next == null) {
             return head;
         }
         ListNode cur = head;
         ListNode temp = cur;
         ListNode pointter = null;
-        while(cur != null){
+        while (cur != null) {
             temp = temp.next;
             cur.next = pointter;
             pointter = cur;
@@ -53,10 +49,67 @@ public class Solution {
         // head <-  head.next
     }
 
-    //构造函数 递归
+    // 方法三：递归  recursive Java solution
+
+    /**
+     * Recurrence Relation
+     * Let's start with the recurrence relation within the Pascal's Triangle.
+     * First of all, we define a function f(i, j) which returns the number in the Pascal's Triangle in the i-th row and j-th column.
+     * <p>
+     * We then can represent the recurrence relation with the following formula:
+     * f(i, j) = f(i - 1, j - 1) + f(i - 1, j)
+     * <p>
+     * Base Case
+     * As one can see, the leftmost and rightmost numbers of each row are the base cases in this problem, which are always equal to 1.
+     * As a result, we can define the base case as follows:
+     * <p>
+     * 1. Recurrence Relation
+     * we define a function f(ListNode) reversed ListNode
+     * <p>
+     * We then can represent the recurrence relation with the following formula:
+     * f(listNode) =  f(lisNode.next) -> listNode
+     * <p>
+     * = f(listNode.next.next) -> listNode.next -> listNode
+     * <p>
+     * =  f(listNode.next.next) -> listNode.next.next -> listNode.next -> listNode
+     * A[3]                 A[2]     ->    A[1]
+     * (A[n-1] -> A[n])
+     * A[n] -> A(n-1)
+     * ...
+     * <p>
+     * 1 -> 2 -> 3 -> 4 -> 5
+     * 1 <- 2 <- 3 <- 4 <- 5
+     * <p>
+     * 2.Base Case
+     * listNode == null, then return null
+     * listNode.next == null, then return listNode
+     */
+    public ListNode reverseList2(ListNode head) {
+        ListNode tail = recursionReverseList(head);
+        return head;
+    }
+
+    public ListNode recursionReverseList(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode nextReverse = recursionReverseList(head.next);
+
+        head.next = null;
+        ListNode cur = nextReverse;
+        while (cur.next != null) {
+            cur = cur.next;
+        }
+        cur.next = head;
+
+        return nextReverse;
+    }
+
+
+    // 方法四：构造函数 递归
     public ListNode constructor(ListNode head) {
         ListNode result = null;
-        while(head != null){
+        while (head != null) {
             result = new ListNode(head.val, result);
             head = head.next;
         }
@@ -69,34 +122,21 @@ public class Solution {
         ListNode c = new ListNode(3);
         ListNode d = new ListNode(4);
         ListNode e = new ListNode(5);
-        b.next = c;
         a.next = b;
-        d.next = e;
+        b.next = c;
         c.next = d;
+        d.next = e;
 
         Solution solution = new Solution();
-        ListNode result =  solution.constructor(a);
-        while (result !=null){
+        ListNode result = solution.recursionReverseList(a);
+        while (result != null) {
             System.out.println(String.valueOf(result.val));
-            if (result.next != null){
-                result=result.next;
-            }else{
+            if (result.next != null) {
+                result = result.next;
+            } else {
                 break;
             }
         }
     }
 }
 
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {
-    }
-    ListNode(int val) {
-        this.val = val;
-    }
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
