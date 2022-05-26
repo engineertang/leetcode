@@ -31,7 +31,7 @@ public class TwoSum {
 
     /**
      * HashMap 时间复杂度变小
-     * Time complexity : O(n*2)
+     * Time complexity : O(n)
      * Space complexity : O(n)
      */
     public int[] twoSum2(int[] nums, int target) throws Exception {

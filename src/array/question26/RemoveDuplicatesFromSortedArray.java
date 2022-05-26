@@ -9,6 +9,7 @@ import java.util.function.IntConsumer;
  */
 public class RemoveDuplicatesFromSortedArray {
 
+    // In-place time Complixity: O(2N) space Complixity: O(1)
     public int removeDuplicates(int[] nums) {
         int count = 1;
         for(int i = 1; i< nums.length; i++){
@@ -34,7 +35,7 @@ public class RemoveDuplicatesFromSortedArray {
 
     public int removeDuplicates2(int[] nums) {
         // transforms input using no auxiliary data structure. However a small amount of extra storage space is allowed for auxiliary variables.
-        //In-place algorithm updates input sequence only through replacement or swapping of elements.
+        // In-place algorithm updates input sequence only through replacement or swapping of elements.
         if (nums.length == 0) return 0;
         int i = 0;
         for (int j = 1; j < nums.length; j++) {
@@ -43,24 +44,13 @@ public class RemoveDuplicatesFromSortedArray {
                 nums[i] = nums[j];
             }
         }
-        for (int m = 0; m < nums.length; m++) {
-            System.out.println(nums[m] + " ");
-        }
         return i + 1;
     }
 
     public static void main(String[] args) {
-        RemoveDuplicatesFromSortedArray clas = new RemoveDuplicatesFromSortedArray();
+        RemoveDuplicatesFromSortedArray removeDuplicates = new RemoveDuplicatesFromSortedArray();
         int[] array = {0,0,1,1,1,2,2,3,3,4};
-
-        clas.removeDuplicates(array);
-
-        Arrays.stream(array).forEach(new IntConsumer() {
-            @Override
-            public void accept(int value) {
-                System.out.printf(value + ", ");
-            }
-        });
+        removeDuplicates.removeDuplicates2(array);
+        Arrays.stream(array).forEach(value -> System.out.printf(value + ", "));
     }
-
 }

@@ -1,9 +1,6 @@
 package array;
 
-import dynamicProgram.Question121;
-
 import java.util.Arrays;
-import java.util.function.IntConsumer;
 
 public class Question1089 {
     public void duplicateZeros(int[] arr) {

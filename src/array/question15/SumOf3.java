@@ -5,8 +5,13 @@ import java.util.stream.Collectors;
 
 
 public class SumOf3 {
-    // 时间复杂度O(n^3)
+    // HashMap
     public List<List<Integer>> threeSum(int[] nums) {
+        return null;
+    }
+
+    // 时间复杂度O(n^3)
+    public List<List<Integer>> threeSum2(int[] nums) {
         Arrays.sort(nums);
         Set<List<Integer>> result = new HashSet<>();
 
@@ -35,6 +40,4 @@ public class SumOf3 {
         }
         return result.stream().collect(Collectors.toList());
     }
-
-    // HashMap
 }
