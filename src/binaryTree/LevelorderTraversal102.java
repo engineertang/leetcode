@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-// Question102   用queue的问题，广度优先算法BFS, 节点可能是null
+// Question102   queue，层序遍历
 public class LevelorderTraversal102 {
     public List<List<Integer>> levelOrder(TreeNode p) {
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
