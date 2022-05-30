@@ -2,9 +2,9 @@ package hashSetAndMap;
 
 import java.util.HashSet;
 import java.util.Set;
-import java.util.function.IntFunction;
 
-public class SingleNumber {
+// 136. 只出现一次的数字
+public class SingleNumber136 {
     public int singleNumber(int[] nums) {
         Set<Integer> set = new HashSet<>();
         for (int i = 0; i < nums.length; i++) {

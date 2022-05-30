@@ -2,9 +2,9 @@ package hashSetAndMap;
 
 import java.util.*;
 
-public class GroupStrings {
+public class GroupAnagrams49 {
 
-    public List<List<String>> groupStrings(String[] strs) {
+    public List<List<String>> groupAnagrams(String[] strs) {
         HashMap<String, List<String>> res = new HashMap<>();
         for (int i = 0; i < strs.length; i++) {
             String cur = strs[i];
@@ -26,25 +26,18 @@ public class GroupStrings {
         return result;
     }
 
-    // 将字符串移位, 直到首字母为a
     public static String sort(String s) {
         char[] chars = s.toCharArray();
-        while(chars[0] != 'a'){
-            for(int i = 0; i < chars.length; i ++){
-                if(chars[i] == 'z'){
-                    chars[i] = 'a';
-                }else {
-                    chars[i]= (char) (chars[i] + 1);
-                }
-            }
-        }
+        Arrays.sort(chars);
         return String.valueOf(chars);
+        /*StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(chars, 0, chars.length);
+        return stringBuilder.toString();*/
     }
 
 
     public static void main(String[] args) {
-        String[] array = {"abc","bcd","acef","xyz","az","ba","a","z"};
-        GroupStrings groupStrings = new GroupStrings();
-        System.out.println(groupStrings.groupStrings(array));
+        String res = sort("bcazk");
+        System.out.println(res);
     }
 }

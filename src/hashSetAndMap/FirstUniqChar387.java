@@ -2,7 +2,7 @@ package hashSetAndMap;
 
 import java.util.HashMap;
 
-public class FirstUniqChar {
+public class FirstUniqChar387 {
 
     public int firstUniqChar(String s) {
         HashMap<Character, Integer> map = new HashMap<>();
