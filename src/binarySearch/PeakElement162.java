@@ -10,7 +10,7 @@ package binarySearch;
  * 保证查找空间在每一步中至少有 2 个元素。
  * 需要进行后处理。 当你剩下 1 个元素时，循环 / 递归结束。 需要评估剩余元素是否符合条件。
  */
-public class RelativeHigh {
+public class PeakElement162 {
     // binary search template 1
     public int findPeakElement(int[] nums) {
         if (nums.length == 1) {
@@ -42,10 +42,10 @@ public class RelativeHigh {
         return 0;
     }
 
-    // binary search template 2  O(log2n)  applied to middle point need to compare with neighboring point
+    // binary search template 2  O(log n)  applied to middle point need to compare with neighboring point
     public int findPeakElement2(int[] nums) {
         if(nums.length == 1){
-            return nums[0];
+            return 0;
         }
         int left = 0, right = nums.length - 1;
         // left middle right
