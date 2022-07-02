@@ -16,7 +16,6 @@ public class PostorderTraversal {
     }
 
     // method 2: linear 遍历
-
     /**
      * pre-order traversal is root-left-right, and post order is left-right-root.
      * modify the code for pre-order to make it root-right-left, and then reverse the output so that we can get left-right-root .
@@ -28,21 +27,45 @@ public class PostorderTraversal {
      * 3.reverse the ouput.
      */
     public static List<Integer> optimize(TreeNode root) {
-        LinkedList<Integer> result = new LinkedList<>();
-        Deque<TreeNode> stack = new ArrayDeque<>();
-        TreeNode p = root;
-        while (!stack.isEmpty() || p != null) {
-            if (p != null) {
-                stack.push(p);
-                result.addFirst(p.val);  // Reverse the process of preorder
-                p = p.right;             // Reverse the process of preorder
-            } else {
+        LinkedList<Integer> result = new LinkedList<>();  //前后中 遍历结果
+        Deque<TreeNode> stack = new ArrayDeque<>();  // 栈
+        TreeNode cur = root;
+
+        while (!stack.isEmpty() || cur != null) {
+            if (cur != null) {
+                stack.push(cur);
+                result.addFirst(cur.val);  // Reverse the process of preorder
+                cur = cur.right;             // Reverse the process of preorder
+            } else  if (cur == null){
                 TreeNode node = stack.pop();
-                p = node.left;           // Reverse the process of preorder
+                cur = node.left;           // Reverse the process of preorder
             }
         }
         return result;
     }
+
+    // method 3: iteratvie 遍历
+    public List<Integer> postorderTraversal3(TreeNode root) {// 中右左 -- 反转 -- 左中右
+        Deque<TreeNode> stack = new LinkedList<TreeNode>();
+        LinkedList<Integer> result = new LinkedList<>();
+        if (root == null){
+            return result;
+        }
+        stack.push(root);
+        while (stack.size() != 0){
+            TreeNode cur = stack.pop();
+            result.addFirst(cur.val);
+
+            if (cur.left != null){
+                stack.push(cur.left);
+            }
+            if (cur.right != null){
+                stack.push(cur.right);
+            }
+        }
+        return result;
+    }
+
 
     /**      1
      *     4   3

@@ -29,7 +29,7 @@ public class PreorderTraversal {
         return list;
     }
 
-    public List<Integer> preorderTraversal2(TreeNode root) {
+    public List<Integer> preorderTraversal2(TreeNode root) {  // 中左右
         Deque<TreeNode> stack = new LinkedList<TreeNode>();
         List<Integer> result = new ArrayList<>();
         if (root == null){

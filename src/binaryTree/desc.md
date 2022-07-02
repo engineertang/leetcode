@@ -13,13 +13,13 @@
 
 使用栈，先添加右子节点，再添加左子节点
 ```java
-        TreeNode tmp = stack.pop();
+        TreeNode tmp = stackAndDFS.pop();
         result.add(tmp.val);
-        stack.push(tmp.right);
-        stack.push(tmp.left);
+        stackAndDFS.push(tmp.right);
+        stackAndDFS.push(tmp.left);
 ```
 ### 2.中序
-* <b>通过递归recursion的方式</b>
+* <b>通过递归recursion的方式，采用深度优先算法</b>
 ```java
     public List<Integer> recursion(TreeNode root) {
         List<Integer> list = new ArrayList<>();
@@ -36,11 +36,11 @@
 先迭代根节点，将它的所有子节点都添加在栈中
 ```java
         while (cur != null) {
-            stack.push(cur);
+            stackAndDFS.push(cur);
             cur = cur.left;
         }
-        while (stack.size() != 0) {
-            TreeNode tmp = stack.pop();
+        while (stackAndDFS.size() != 0) {
+            TreeNode tmp = stackAndDFS.pop();
             result.add(tmp.val);
 ```
 
@@ -56,16 +56,21 @@
 前序是中左右，略作改动，改为中右左，然后将结果reversed,变成左右中
 使用栈，先添加右子节点，再添加左子节点
 ```java
-        TreeNode tmp = stack.pop();
+        TreeNode tmp = stackAndDFS.pop();
         result.add(tmp.val);
-        stack.push(tmp.left);
-        stack.push(tmp.right);
+        stackAndDFS.push(tmp.left);
+        stackAndDFS.push(tmp.right);
         
         reverse(result);// 反转
 ```
 
 ### 4.层序
-* <b>使用Queue队列，通过迭代iteration的方式</b>
+* <b>使用Queue队列，通过迭代iteration的方式,采用广度优先算法</b>
+
+树的广度优先遍历的写法模式相对固定：
+* 使用队列；
+* 在队列非空的时候，动态取出队首元素；
+* 取出队首元素的时候，把队首元素相邻的结点（非空）加入队列。
 ```java
         while (!queue.isEmpty()) {
             // queue里只会保留当前一层的节点
@@ -89,5 +94,6 @@
             result.add(list);
         }
 ```
-##
-## 递归二叉树
+## 算法
+二叉树用栈时使用深度优先算法，队列时使用广度优先算法，当二叉树是排序好的二叉搜索树时，可以使用二叉搜索算法。
+树的DPS,WPS,可延伸为图的DPS,WPS

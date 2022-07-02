@@ -1,18 +1,11 @@
 package binaryTree;
 
 public class SymmetricTree101 {
-    // 递归
     public boolean isSymmetric(TreeNode root) {
-        /*
-        root.left = root.right;
-        root.left.left = root.right.right;
-        root.left.right == root.right.left
-        */
-
         return isSymmetric(root.left, root.right);
     }
 
-
+    // recursion 递归
     public boolean isSymmetric(TreeNode left, TreeNode right) {
         //异或 base case
         if (left == null && right == null) {
