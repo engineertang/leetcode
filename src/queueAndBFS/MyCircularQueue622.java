@@ -6,15 +6,14 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 //MyCircularQueue
-//Question622
-class Question622 {
+class MyCircularQueue622 {
     private Integer[] data;
     // two pointer to indicate the start position and end position, index between [0, n-1]
     private Integer p_start;
     private Integer p_end;
     private int length;
 
-    public Question622(int k) {
+    public MyCircularQueue622(int k) {
         data = new Integer[k];
         length = k;
     }
@@ -75,14 +74,14 @@ class Question622 {
 
 
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        Class myclass = Class.forName("queueAndBFS.Question622");
+        Class myclass = Class.forName("queueAndBFS.MyCircularQueue622");
         String[] excution = {"MyCircularQueue", "enQueue", "Rear", "Rear", "deQueue", "enQueue", "Rear", "deQueue", "Front", "deQueue", "deQueue", "deQueue"};
         Integer[] parameters = {6, 6, null, null, null, 5, null, null, null, null, null, null};
 
-        Question622 myCircularQueue = null;
+        MyCircularQueue622 myCircularQueue = null;
         for (int i = 0; i < excution.length; i++) {
             if (i == 0) {
-                myCircularQueue = new Question622(parameters[i]);
+                myCircularQueue = new MyCircularQueue622(parameters[i]);
             } else if (excution[i].equalsIgnoreCase("enQueue")) {
                 Object object = myCircularQueue.enQueue(parameters[i]);
                 System.out.println(object.toString());
