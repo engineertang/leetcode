@@ -4,7 +4,7 @@ import com.linkedList.ListNode;
 
 import java.util.Stack;
 
-public class Solution {
+public class ReverseList {
     // 方法一：用栈数据结构 反转链表
     public ListNode reverseList(ListNode head) {
         Stack<ListNode> stack = new Stack<ListNode>();
@@ -127,8 +127,8 @@ public class Solution {
         c.next = d;
         d.next = e;
 
-        Solution solution = new Solution();
-        ListNode result = solution.recursionReverseList(a);
+        ReverseList reverseList = new ReverseList();
+        ListNode result = reverseList.recursionReverseList(a);
         while (result != null) {
             System.out.println(String.valueOf(result.val));
             if (result.next != null) {

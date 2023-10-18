@@ -1,7 +1,7 @@
 package com.question21;
 
 import com.linkedList.ListNode;
-import com.linkedList.question21.Question21;
+import com.linkedList.question21.MergeSortedList;
 import org.junit.Test;
 
 /** 
@@ -21,7 +21,7 @@ public void testMerge2() throws Exception {
     ListNode listNode2 = new ListNode(5);
     listNode2.setNext(new ListNode(8));
 
-    Question21 mergeLinkedList= new Question21();
+    MergeSortedList mergeLinkedList= new MergeSortedList();
     ListNode listNode3 = mergeLinkedList.merge2(listNode1, listNode2);
 
     while(null != listNode3){

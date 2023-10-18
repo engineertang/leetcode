@@ -5,7 +5,7 @@ import com.linkedList.ListNode;
 /**
  * Created by Administrator on 2017/12/7.
  */
-public class Question21 {
+public class MergeSortedList {
     /*public LinkedList merge(LinkedList l1, LinkedList l2){
         ListIterator<Integer> iterator1 = l1.listIterator();
         ListIterator<Integer> iterator2 = l2.listIterator();
