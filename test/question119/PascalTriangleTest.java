@@ -1,6 +1,6 @@
 package question119;
 
-import recursion.question119.PascalTriangle;
+import recursion.PascalTriangle119;
 import org.junit.Test;
 
 import java.util.List;
@@ -18,7 +18,7 @@ public class PascalTriangleTest {
 */ 
     @Test
     public void testGetRow() throws Exception {
-        PascalTriangle p = new PascalTriangle();
+        PascalTriangle119 p = new PascalTriangle119();
         List result = p.getRow(4);
         for (Object o : result) {
             System.out.print(o + " ");

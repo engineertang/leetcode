@@ -3,7 +3,7 @@ package recursion;
 import java.util.Arrays;
 import java.util.Stack;
 
-public class Question111 {
+public class ReversePrint111 {
     // 递归  f(n) = n + f(n-1)
     //  f(1)
     public int[] reversePrint(ListNode head) {

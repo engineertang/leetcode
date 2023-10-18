@@ -1,14 +1,13 @@
-package recursion.question119;
+package recursion;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 /**
  * Created by Administrator on 2017/12/17.
  * Questtion119
  */
-public class PascalTriangle {
+public class PascalTriangle119 {
     //dynamic programming
     //自更新： list从左侧加入一个1，然后更新index为1到倒数第2个数，此处循环j是迭代的实现，每次会从一行一行往下迭代更新
     public List<Integer> getRow(int rowIndex) {
@@ -69,7 +68,7 @@ public class PascalTriangle {
     }
 
     public static void main(String[] args) {
-        PascalTriangle pascalTriangle = new PascalTriangle();
+        PascalTriangle119 pascalTriangle = new PascalTriangle119();
         pascalTriangle.getRow(30).stream()
                 .forEach(integer -> System.out.printf(integer + "  ")
                 );

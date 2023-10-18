@@ -1,6 +1,6 @@
 package recursion;
 
-public class Question700 {
+public class SearchBST700 {
     public TreeNode searchBST(TreeNode root, int val) {
         if (root == null) {
             return null;

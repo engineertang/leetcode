@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 //  AddDigit
-public class Question258 {
+public class AddDigits258 {
 
     public int addDigits(int num) {
         List<Integer> list = new ArrayList<>();

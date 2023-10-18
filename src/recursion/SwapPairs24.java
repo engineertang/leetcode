@@ -2,7 +2,7 @@ package recursion;
 
 import linkedList.ListNode;
 
-public class Question24 {
+public class SwapPairs24 {
     public ListNode swapPairs(ListNode head) {
         ListNode next = swap(head);
         return next;

@@ -1,6 +1,6 @@
 package recursion;
 
-public class Question344 {
+public class ReverseString344 {
     public void reverseString(char[] s) {
         int left = 0;
         int right = s.length - 1;

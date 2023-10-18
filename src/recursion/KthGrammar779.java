@@ -1,6 +1,6 @@
 package recursion;
 
-public class Question779 {
+public class KthGrammar779 {
 
     public int kthGrammar(int n, int k) {
         // recurse relation
