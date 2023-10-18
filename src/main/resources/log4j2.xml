@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Properties>
+		<Property name="app.name">payment-processor</Property>
+		<Property name="date.format">yyyy-MM-dd</Property>
+		<Property name="datetime.format">yyyy-MM-dd HH:mm:ss.SSS</Property>
+		<Property name="pattern.layout">%d{${datetime.format}} [%t] [%c{1}] %-5p - %m{nolookups}%n%xEx</Property>
+	</Properties>
+	<Appenders>
+		<Console name="STDOUT" target="SYSTEM_OUT">
+			<PatternLayout pattern="${pattern.layout}"/>
+			<!-- <ThresholdFilter level="${sys:log.level:-info}" onMatch="ACCEPT" onMismatch="DENY" /> -->
+		</Console>
+		<RollingFile name="RollingFile" fileName="${sys:log.dir}/${app.name}.log" filePattern="${sys:log.dir}/${app.name}-%d{${date.format}}-%i.log.gz">
+			<PatternLayout pattern="${pattern.layout}"/>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="250 MB"/>
+			</Policies>
+			<DefaultRolloverStrategy>
+				<Delete basePath="${sys:log.dir}" maxDepth="2">
+					<IfFileName glob="${app.name}-*.log.gz" />
+					<IfLastModified age="30d" />
+				</Delete>
+			</DefaultRolloverStrategy>
+		</RollingFile>
+		<RollingFile name="ErrorRollingFile" fileName="${sys:log.dir}/${app.name}.err.log" filePattern="${sys:log.dir}/${app.name}.err-%d{${date.format}}-%i.log.gz">
+			<PatternLayout pattern="${pattern.layout}"/>
+			<Filters>
+				<ThresholdFilter level="ERROR" onMatch="ACCEPT" />
+			</Filters>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="250 MB"/>
+			</Policies>
+			<DefaultRolloverStrategy>
+				<Delete basePath="${sys:log.dir}" maxDepth="2">
+					<IfFileName glob="${app.name}.err-*.log.gz" />
+					<IfLastModified age="30d" />
+				</Delete>
+			</DefaultRolloverStrategy>
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.iaspec.ecfps.util.SystemLogger" level="debug" />
+		<Logger name="com.iaspec.ecfps" level="info">
+			<AppenderRef ref="RollingFile"/>
+			<AppenderRef ref="ErrorRollingFile"/>
+		</Logger>
+		<Logger name="org.springframework" level="warn">
+			<AppenderRef ref="RollingFile"/>
+			<AppenderRef ref="ErrorRollingFile"/>
+		</Logger>
+		<!-- <Logger name="org.hibernate.SQL" level="debug" /> -->
+		<!-- <Logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="trace" /> -->
+		<Logger name="org.hibernate" level="warn">
+			<AppenderRef ref="RollingFile"/>
+			<AppenderRef ref="ErrorRollingFile"/>
+		</Logger>
+		<Root level="info">
+			<AppenderRef ref="STDOUT"/>
+		</Root>
+	</Loggers>
+</Configuration>

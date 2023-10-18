@@ -25,9 +25,9 @@ public class PascalTriangleTest {
         for (Object o : result) {
             System.out.println(o + " ");
         }
-/**1, 4, 6, 4, 1
-//
- */
+        /**
+         * 1, 4, 6, 4, 1
+         */
         Assert.assertArrayEquals(new Integer[]{1, 5, 10, 10, 5, 1}, result.toArray(new Integer[0]));
     }
 } 
