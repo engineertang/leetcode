@@ -3,7 +3,8 @@ package com.question14;
 import com.string.question14.LongestCommonPrefix;
 import junit.framework.Test;
 import junit.framework.TestSuite; 
-import junit.framework.TestCase; 
+import junit.framework.TestCase;
+import org.junit.Assert;
 
 /** 
 * LongestCommonPrefix Tester. 
@@ -27,6 +28,7 @@ public void testGetLongestCommonPrefix() throws Exception {
     LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
     String[] strArray = {"leet", "leetcode", "levis"};
     System.out.print(longestCommonPrefix.getLongestCommonPrefix(strArray));
+    Assert.assertEquals("le", longestCommonPrefix.getLongestCommonPrefix(strArray));
 } 
 
 

@@ -28,6 +28,8 @@ public void testMerge2() throws Exception {
         System.out.print(listNode3.getVal());
         listNode3 = listNode3.getNext();
     }
+
+
 } 
 
 
