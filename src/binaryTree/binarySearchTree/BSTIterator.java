@@ -10,6 +10,7 @@ import java.util.List;
 public class BSTIterator {
     List<Integer> result = new ArrayList<>();
     int index = 0;
+
     public BSTIterator(TreeNode root) {
         Deque<TreeNode> stack = new LinkedList<TreeNode>();
 
