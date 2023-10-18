@@ -1,7 +1,7 @@
 package question21;
 
-import linkedList.ListNode;
-import linkedList.question21.Question21;
+import com.linkedList.ListNode;
+import com.linkedList.question21.Question21;
 import org.junit.Test;
 
 /** 

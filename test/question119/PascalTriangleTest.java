@@ -1,6 +1,6 @@
 package question119;
 
-import recursion.PascalTriangle119;
+import com.recursion.PascalTriangle119;
 import org.junit.Test;
 
 import java.util.List;

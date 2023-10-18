@@ -1,6 +1,6 @@
 package array.question169;
 
-import array.MajorityElement169;
+import com.array.MajorityElement169;
 import org.junit.Assert;
 import org.junit.Test;
 

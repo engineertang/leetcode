@@ -1,7 +1,7 @@
 package question26;
 
 import org.junit.Test;
-import array.question26.RemoveDuplicatesFromSortedArray;
+import com.array.question26.RemoveDuplicatesFromSortedArray;
 
 /** 
 * RemoveDuplicatesFromSortedArray Tester. 

@@ -1,5 +1,6 @@
 package array.question15;
 
+import com.array.question15.SumOf3;
 import org.junit.Test;
 
 public class SumOf3Test {

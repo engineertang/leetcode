@@ -1,6 +1,6 @@
 package question1;
 
-import array.question1.TwoSum;
+import com.array.question1.TwoSum;
 import org.junit.Test;
 
 /**

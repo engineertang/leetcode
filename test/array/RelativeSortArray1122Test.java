@@ -1,11 +1,9 @@
 package array;
 
+import com.array.RelativeSortArray1122;
 import org.junit.Test;
 
 import java.util.Arrays;
-import java.util.function.IntConsumer;
-
-import static org.junit.Assert.*;
 
 public class RelativeSortArray1122Test {
 

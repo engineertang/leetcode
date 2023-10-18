@@ -1,6 +1,6 @@
 package question26;
 
-import array.question26.RemoveElement;
+import com.array.question26.RemoveElement;
 import org.junit.Test;
 
 /** 

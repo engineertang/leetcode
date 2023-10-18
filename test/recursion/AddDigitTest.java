@@ -1,5 +1,6 @@
 package recursion;
 
+import com.recursion.AddDigits258;
 import org.junit.Test;
 
 public class AddDigitTest {
