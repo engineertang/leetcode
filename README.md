@@ -1,4 +1,4 @@
-# leetcode problems
+# Learn Data Structure and Algorithm by grouped leetcode problems
 ## Goal
 To facilitate programming learning and practical ability, we group [leetcode](https://leetcode.com/problems) problems into different collections by data structure and algorithm. Then it would relieve and strengthen ability as to concepts and coding ability of same type.
 
