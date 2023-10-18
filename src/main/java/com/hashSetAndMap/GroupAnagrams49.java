@@ -1,6 +1,10 @@
 package com.hashSetAndMap;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class GroupAnagrams49 {
 
@@ -8,11 +12,11 @@ public class GroupAnagrams49 {
         HashMap<String, List<String>> res = new HashMap<>();
         for (int i = 0; i < strs.length; i++) {
             String cur = strs[i];
-            if(!res.containsKey(sort(cur))){
+            if (!res.containsKey(sort(cur))) {
                 List a = new ArrayList<>();
                 a.add(cur);
                 res.put(sort(cur), a);
-            }else {
+            } else {
                 List a = res.get(sort(cur));
                 a.add(cur);
                 res.put(sort(cur), a);
@@ -20,7 +24,7 @@ public class GroupAnagrams49 {
         }
 
         List<List<String>> result = new ArrayList<>();
-        for (Map.Entry<String, List<String>> entry: res.entrySet()) {
+        for (Map.Entry<String, List<String>> entry : res.entrySet()) {
             result.add(entry.getValue());
         }
         return result;

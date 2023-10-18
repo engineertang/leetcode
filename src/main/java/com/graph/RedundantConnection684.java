@@ -1,6 +1,11 @@
 package com.graph;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class RedundantConnection684 {
     // 给定往一棵 n 个节点 (节点值 1～n) 的树中添加一条边后的图。 树只添加一条边，所以边的数目和节点的数目相等
@@ -30,7 +35,8 @@ public class RedundantConnection684 {
         return null;
     }
 
-    *//**
+    */
+    /**
      * @param adj     邻接表
      * @param u       从顶点 u 开始执行深度优先遍历
      * @param visited 布尔数组，记录某个结点是否被访问过

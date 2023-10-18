@@ -63,8 +63,6 @@ public class DuplicateZeros1089 {
             }
         }
 
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = duplicate[i];
-        }
+        System.arraycopy(duplicate, 0, arr, 0, arr.length);
     }
 }

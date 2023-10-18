@@ -25,9 +25,7 @@ public class MergeSortedArray88 {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         if (n == 0) return;
         if (n != 0 && m == 0) {
-            for (int i = 0; i < n; i++) {
-                nums1[i] = nums2[i];
-            }
+            if (n >= 0) System.arraycopy(nums2, 0, nums1, 0, n);
         }
 
         //  Two-Pointer Approach: from ending point to start point, compare seperately  不适用额外的内存空间
@@ -79,8 +77,6 @@ public class MergeSortedArray88 {
             }
         }
 
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = intArray[i];
-        }
+        System.arraycopy(intArray, 0, arr, 0, arr.length);
     }
 }

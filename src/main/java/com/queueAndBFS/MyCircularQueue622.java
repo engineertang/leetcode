@@ -7,11 +7,11 @@ import java.util.Queue;
 
 //MyCircularQueue
 class MyCircularQueue622 {
-    private Integer[] data;
+    private final Integer[] data;
     // two pointer to indicate the start position and end position, index between [0, n-1]
     private Integer p_start;
     private Integer p_end;
-    private int length;
+    private final int length;
 
     public MyCircularQueue622(int k) {
         data = new Integer[k];
@@ -84,7 +84,7 @@ class MyCircularQueue622 {
                 myCircularQueue = new MyCircularQueue622(parameters[i]);
             } else if (excution[i].equalsIgnoreCase("enQueue")) {
                 Object object = myCircularQueue.enQueue(parameters[i]);
-                System.out.println(object.toString());
+                System.out.println(object);
             } else {
                 Method method = myclass.getMethod(excution[i]);
                 Object object = method.invoke(myCircularQueue);

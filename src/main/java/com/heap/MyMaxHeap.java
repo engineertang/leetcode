@@ -44,7 +44,7 @@ public class MyMaxHeap {
         int parent = index / 2;
         // If the newly added element is larger than its parent node,
         // its value will be exchanged with that of the parent node, 向上交换二叉树的新增节点与父节点，确保堆仍符合大顶堆要求
-        while ( maxHeap[index] > maxHeap[parent] && index > 1 ) {
+        while (maxHeap[index] > maxHeap[parent] && index > 1) {
             int temp = maxHeap[index];
             maxHeap[index] = maxHeap[parent];
             maxHeap[parent] = temp;
@@ -132,7 +132,7 @@ public class MyMaxHeap {
         maxheap.add(2);
         maxheap.add(3);
         // [3,1,2]
-        System.out.println(maxheap.toString());
+        System.out.println(maxheap);
         // 3
         System.out.println(maxheap.peek());
         // 3
@@ -140,11 +140,11 @@ public class MyMaxHeap {
         System.out.println(maxheap.pop());
         System.out.println(maxheap.pop());
         // No element
-        System.out.println(maxheap.toString());
+        System.out.println(maxheap);
         maxheap.add(4);
         // Add too many elements
         maxheap.add(5);
         // [4,1,2]
-        System.out.println(maxheap.toString());
+        System.out.println(maxheap);
     }
 }

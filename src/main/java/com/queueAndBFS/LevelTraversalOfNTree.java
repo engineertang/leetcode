@@ -9,24 +9,24 @@ import java.util.Queue;
 public class LevelTraversalOfNTree {
 
     public List<List<Integer>> levelOrder(Node root) {
-        if(root==null){
+        if (root == null) {
             return new ArrayList<>();
         }
         Queue<Node> queue = new LinkedList();
         queue.add(root);
         List<List<Integer>> result = new ArrayList<>();
 
-        while(queue.size() != 0){
+        while (queue.size() != 0) {
             int curLevelNum = queue.size();
 
             List<Integer> curLevel = new LinkedList<>();
             // 每次只取单层的节点Node
-            while (curLevelNum > 0){
+            while (curLevelNum > 0) {
                 Node cur = queue.poll();
                 curLevel.add(cur.val);
-                curLevelNum --;
+                curLevelNum--;
 
-                if (cur.children != null){
+                if (cur.children != null) {
                     List<Node> children = cur.children;
                     children.stream().forEach(node -> queue.add(node));
                 }

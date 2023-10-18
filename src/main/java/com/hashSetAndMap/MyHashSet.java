@@ -6,14 +6,18 @@ import java.util.List;
 public class MyHashSet {
 
     private final int MAX_LEN = 100000; // the amount of buckets
-    private List<Integer>[] set;      // hash set implemented by array
+    private final List<Integer>[] set;      // hash set implemented by array
 
-    /** Returns the corresponding bucket index. */
+    /**
+     * Returns the corresponding bucket index.
+     */
     private int getIndex(int key) {
         return key % MAX_LEN;
     }
 
-    /** Search the key in a specific bucket. Returns -1 if the key does not existed. */
+    /**
+     * Search the key in a specific bucket. Returns -1 if the key does not existed.
+     */
     private int getPos(int key, int index) {
         // Each bucket contains a list.
         List<Integer> temp = set[index];
@@ -29,9 +33,11 @@ public class MyHashSet {
         return -1;
     }
 
-    /** Initialize your data structure here. */
+    /**
+     * Initialize your data structure here.
+     */
     public MyHashSet() {
-        set = (List<Integer>[])new ArrayList[MAX_LEN];
+        set = (List<Integer>[]) new ArrayList[MAX_LEN];
     }
 
     public void add(int key) {
@@ -55,7 +61,9 @@ public class MyHashSet {
         }
     }
 
-    /** Returns true if this set did not already contain the specified element */
+    /**
+     * Returns true if this set did not already contain the specified element
+     */
     public boolean contains(int key) {
         int index = getIndex(key);
         int pos = getPos(key, index);

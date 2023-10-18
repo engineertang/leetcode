@@ -12,32 +12,33 @@ public class FindMode_501 {
         int n = 0;
         int max = -1;
         helper(root, map);
-        for(int p : map.values()){
+        for (int p : map.values()) {
             max = Math.max(max, p);
         }
         System.out.println(max);
 
-        for(int p : map.keySet()){
-            if(map.get(p) == max){
+        for (int p : map.keySet()) {
+            if (map.get(p) == max) {
                 n++;
             }
         }
         int[] res = new int[n];
         int ind = 0;
         System.out.println(map);
-        for(int p : map.keySet()){
-            if(map.get(p) == max){
+        for (int p : map.keySet()) {
+            if (map.get(p) == max) {
                 res[ind++] = p;
             }
         }
         return res;
 
     }
-    public void helper(TreeNode root, Map<Integer, Integer> map){
-        if(root == null){
+
+    public void helper(TreeNode root, Map<Integer, Integer> map) {
+        if (root == null) {
             return;
         }
-        map.put(root.val, map.getOrDefault(root.val, 0)+1);
+        map.put(root.val, map.getOrDefault(root.val, 0) + 1);
 
 
         helper(root.right, map);

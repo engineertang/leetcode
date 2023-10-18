@@ -1,6 +1,11 @@
 package com.array;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 public class Intersection2248 {
     public List<Integer> intersection(int[][] nums) {
@@ -13,7 +18,7 @@ public class Intersection2248 {
 
         for (int i = 0; i < rowCount; i++) {
             for (int j = 0; j < columnCount; j++) {
-                if (!map.containsKey(new Integer(nums[i][j]))) {
+                if (!map.containsKey(Integer.valueOf(nums[i][j]))) {
                     map.put(nums[i][j], 1);
                 } else {
                     map.put(nums[i][j], (map.get(nums[i][j]) + 1));

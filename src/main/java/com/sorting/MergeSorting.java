@@ -13,8 +13,7 @@ public class MergeSorting {
         mergeSort(nums, m + 1, r);
         // 合并子数组
         int[] tmp = new int[r - l + 1]; // 暂存需合并区间元素
-        for (int k = l; k <= r; k++)
-            tmp[k - l] = nums[k];
+        if (r + 1 - l >= 0) System.arraycopy(nums, l, tmp, l - l, r + 1 - l);
         int i = 0, j = m - l + 1;       // 两指针分别指向左/右子数组的首个元素
         for (int k = l; k <= r; k++) {  // 遍历合并左/右子数组
             if (i == m - l + 1)
@@ -30,7 +29,7 @@ public class MergeSorting {
 
     public static void main(String[] args) {
         // 调用
-        int[] nums = { 3, 4, 1, 5, 2, 1 };
+        int[] nums = {3, 4, 1, 5, 2, 1};
         MergeSorting mergeSorting = new MergeSorting();
 
         mergeSorting.mergeSort(nums, 0, nums.length - 1);

@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- *  Queue  叫做广度优先遍历, 稍加改动，加一个每层的count，变成level order
+ * Queue  叫做广度优先遍历, 稍加改动，加一个每层的count，变成level order
  */
 public class SameTree100 {
     public boolean isSameTree(TreeNode p, TreeNode q) {
@@ -47,12 +47,11 @@ public class SameTree100 {
 
     // 第2种方法是使用递归
     public boolean isSameTree2(TreeNode p, TreeNode q) {
-        if (p == null ^ q == null){
+        if (p == null ^ q == null) {
             return false;
-        }else if(p != null && q != null && p.val != q.val){
+        } else if (p != null && q != null && p.val != q.val) {
             return false;
-        }
-        else if(p == null && q == null){
+        } else if (p == null && q == null) {
             return true;
         }
         return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);

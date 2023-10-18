@@ -23,7 +23,7 @@ public class BSTIterator {
             TreeNode tmp = stack.pop();
             result.add(tmp.val);
 
-            if (tmp.right != null)  {
+            if (tmp.right != null) {
                 TreeNode current = tmp.right;
                 while (current != null) {
                     stack.push(current);

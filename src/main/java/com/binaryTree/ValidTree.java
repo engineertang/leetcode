@@ -46,7 +46,7 @@ public class ValidTree {
 
             /*if (tmp.right == null) {
             } else */
-            if (tmp.right != null)  {
+            if (tmp.right != null) {
                 TreeNode current = tmp.right;
                 while (current != null) {
                     stack.push(current);
@@ -56,7 +56,7 @@ public class ValidTree {
         }
 
         for (int i = 1; i < result.size(); i++) {// 判断list是单调递增
-            if(result.get(i) <= result.get(i-1))
+            if (result.get(i) <= result.get(i - 1))
                 return false;
         }
         return true;

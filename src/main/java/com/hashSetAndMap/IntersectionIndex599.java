@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Function;
-import java.util.function.ToIntFunction;
-import java.util.stream.IntStream;
 
 public class IntersectionIndex599 {
     public String[] findRestaurant(String[] list1, String[] list2) {
@@ -21,18 +18,18 @@ public class IntersectionIndex599 {
         for (int i = 0; i < list2.length; i++) {
             map2.put(list2[i], i);
         }
-        for (Map.Entry<String, Integer> entry : map1.entrySet() ) {
+        for (Map.Entry<String, Integer> entry : map1.entrySet()) {
             if (map2.containsKey(entry.getKey())) { // 交集
-                if((entry.getValue() + map2.get(entry.getKey())) < minSum) {
+                if ((entry.getValue() + map2.get(entry.getKey())) < minSum) {
                     res.clear();
                     res.add(entry.getKey());
-                }else if ((entry.getValue() + map2.get(entry.getKey())) == minSum) {
+                } else if ((entry.getValue() + map2.get(entry.getKey())) == minSum) {
                     res.add(entry.getKey());
                 }
                 minSum = Math.min(minSum, entry.getValue() + map2.get(entry.getKey()));
             }
         }
-        return res.stream().toArray(String[] :: new);
+        return res.stream().toArray(String[]::new);
     }
 
 }

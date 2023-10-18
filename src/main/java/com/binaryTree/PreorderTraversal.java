@@ -31,18 +31,18 @@ public class PreorderTraversal {
     public List<Integer> preorderTraversal2(TreeNode root) {  // 中左右
         Deque<TreeNode> stack = new LinkedList<TreeNode>();
         List<Integer> result = new ArrayList<>();
-        if (root == null){
+        if (root == null) {
             return result;
         }
         stack.push(root);
-        while (stack.size() != 0){
+        while (stack.size() != 0) {
             TreeNode tmp = stack.pop();
             result.add(tmp.val);
 
-            if (tmp.right != null){
+            if (tmp.right != null) {
                 stack.push(tmp.right);
             }
-            if (tmp.left != null){
+            if (tmp.left != null) {
                 stack.push(tmp.left);
             }
         }

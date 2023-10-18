@@ -35,35 +35,35 @@ public class ShortestPathBinaryMatrix1091 {
                     return step;
                 }
 
-                if (row - 1 >= 0 && visited[row - 1][col] == false && grid[row - 1][col] == 0) {
+                if (row - 1 >= 0 && !visited[row - 1][col] && grid[row - 1][col] == 0) {
                     queue.add((row - 1) * n + col);
                     visited[row - 1][col] = true;
                 }
-                if (row + 1 < n && grid[row + 1][col] == 0 && visited[row + 1][col] == false) {
+                if (row + 1 < n && grid[row + 1][col] == 0 && !visited[row + 1][col]) {
                     queue.add((row + 1) * n + col);
                     visited[row + 1][col] = true;
                 }
-                if (col - 1 >= 0 && grid[row][col - 1] == 0 && visited[row][col - 1] == false) {
+                if (col - 1 >= 0 && grid[row][col - 1] == 0 && !visited[row][col - 1]) {
                     queue.add((row) * n + col - 1);
                     visited[row][col - 1] = true;
                 }
-                if (col + 1 < n && grid[row][col + 1] == 0 && visited[row][col + 1] == false) {
+                if (col + 1 < n && grid[row][col + 1] == 0 && !visited[row][col + 1]) {
                     queue.add((row) * n + col + 1);
                     visited[row][col + 1] = true;
                 }
-                if (row - 1 >= 0 && col - 1 >= 0 && grid[row - 1][col - 1] == 0 && visited[row - 1][col - 1] == false) {
+                if (row - 1 >= 0 && col - 1 >= 0 && grid[row - 1][col - 1] == 0 && !visited[row - 1][col - 1]) {
                     queue.add((row - 1) * n + col - 1);
                     visited[row - 1][col - 1] = true;
                 }
-                if (row - 1 >= 0 && col + 1 < n && grid[row - 1][col + 1] == 0 && visited[row - 1][col + 1] == false) {
+                if (row - 1 >= 0 && col + 1 < n && grid[row - 1][col + 1] == 0 && !visited[row - 1][col + 1]) {
                     queue.add((row - 1) * n + col + 1);
                     visited[row - 1][col + 1] = true;
                 }
-                if (row + 1 < n && col - 1 >= 0 && grid[row + 1][col - 1] == 0 && visited[row + 1][col - 1] == false) {
+                if (row + 1 < n && col - 1 >= 0 && grid[row + 1][col - 1] == 0 && !visited[row + 1][col - 1]) {
                     queue.add((row + 1) * n + col - 1);
                     visited[row + 1][col - 1] = true;
                 }
-                if (row + 1 < n && col + 1 < n && grid[row + 1][col + 1] == 0 && visited[row + 1][col + 1] == false) {
+                if (row + 1 < n && col + 1 < n && grid[row + 1][col + 1] == 0 && !visited[row + 1][col + 1]) {
                     queue.add((row + 1) * n + col + 1);
                     visited[row + 1][col + 1] = true;
                 }
@@ -184,7 +184,7 @@ public class ShortestPathBinaryMatrix1091 {
 
         ShortestPathBinaryMatrix1091 bfs = new ShortestPathBinaryMatrix1091();
         int number = bfs.shortestPathBinaryMatrix(grid);
-        System.out.println(Integer.toString(number));
+        System.out.println(number);
     }
 }
 /**

@@ -1,9 +1,9 @@
-package com.string.question9;
+package com.string;
 
 /**
  * Created by Administrator on 2017/12/7.
  */
-public class PalindromeNumber {
+public class PalindromeNumber9 {
     /*给定一个int数，此题关键是空间复杂需为O（1）
     思路1
     ssfsf
@@ -38,9 +38,6 @@ public class PalindromeNumber {
             }
         }*/
 
-        if (seq >= s.length() / 2) {
-            return true;
-        } else
-            return false;
+        return seq >= s.length() / 2;
     }
 }

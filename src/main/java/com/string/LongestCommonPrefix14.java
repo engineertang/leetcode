@@ -1,10 +1,10 @@
-package com.string.question14;
+package com.string;
 
 /**
  * Created by Administrator on 2017/12/17.
  * 循环遍历
  */
-public class LongestCommonPrefix {
+public class LongestCommonPrefix14 {
     public String getLongestCommonPrefix(String[] strs) {
         if (strs.length == 0) return "";
         String prefix = strs[0];

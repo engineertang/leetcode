@@ -45,7 +45,7 @@ public class LinkedList {
             if (null != p) p = p.next;
             if (null != q) q = q.next;
         }
-        if (carry!=0){
+        if (carry != 0) {
             ListNode next = new ListNode(carry);
 
             cur.next = next;

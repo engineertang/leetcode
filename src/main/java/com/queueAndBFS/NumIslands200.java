@@ -59,7 +59,7 @@ public class NumIslands200 {
 
         NumIslands200 bfs = new NumIslands200();
         int number = bfs.numIslands(grid);
-        System.out.println(Integer.toString(number));
+        System.out.println(number);
     }
 
     /**

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 // Question 1097
-public class StateMachine {
+public class StateMachine_1097 {
     public boolean isNumber(String s) {
         Map[] states = {
                 new HashMap<Character, Integer>() {{
@@ -62,8 +62,8 @@ public class StateMachine {
     }
 
     public static void main(String[] args) {
-        StateMachine stateMachine = new StateMachine();
-        Boolean result = stateMachine.isNumber("-34.12E10");
-        System.out.println(result.toString());
+        StateMachine_1097 stateMachine1097 = new StateMachine_1097();
+        boolean result = stateMachine1097.isNumber("-34.12E10");
+        System.out.println(result);
     }
 }

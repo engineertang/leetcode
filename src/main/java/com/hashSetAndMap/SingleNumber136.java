@@ -10,13 +10,11 @@ public class SingleNumber136 {
         for (int i = 0; i < nums.length; i++) {
             if (!set.contains(nums[i])) {
                 set.add(nums[i]);
-            }else if(set.contains(nums[i])){
-                set.remove(nums[i]);
-            }
+            } else set.remove(nums[i]);
         }
 
         Integer[] result = set.stream().toArray(value -> new Integer[1]);
-        return  result[0];
+        return result[0];
 
     }
 

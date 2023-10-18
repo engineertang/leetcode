@@ -15,27 +15,27 @@ public class MaxDepthOfTree104 {
 
     // bfs breadth-first
     public int maxDepth2(TreeNode root) {
-        if (root == null )
+        if (root == null)
             return 0;
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         int count = 0;
 
-        while (queue.size() != 0){
+        while (queue.size() != 0) {
             int levelSize = queue.size();
 
-            while(levelSize > 0){
+            while (levelSize > 0) {
                 TreeNode tmp = queue.poll();
-                if(tmp.left != null){
+                if (tmp.left != null) {
                     queue.add(tmp.left);
                 }
-                if(tmp.right != null){
+                if (tmp.right != null) {
                     queue.add(tmp.right);
                 }
-                levelSize --;
+                levelSize--;
             }
 
-            count ++;
+            count++;
         }
 
         return count;

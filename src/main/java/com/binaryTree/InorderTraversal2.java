@@ -23,7 +23,7 @@ public class InorderTraversal2 {
 
             /*if (tmp.right == null) {
             } else */
-            if (tmp.right != null)  {
+            if (tmp.right != null) {
                 TreeNode current = tmp.right;
                 while (current != null) {
                     stack.push(current);
@@ -50,7 +50,7 @@ public class InorderTraversal2 {
 
             /*if (tmp.right == null) {
             } else */
-            if (tmp.right != null)  {
+            if (tmp.right != null) {
                 cur = tmp.right;
                 while (cur != null) {
                     stack.push(cur);

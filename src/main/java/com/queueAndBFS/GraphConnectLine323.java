@@ -6,21 +6,21 @@ import java.util.Queue;
 
 public class GraphConnectLine323 {
     public int countComponents(Integer n, int[][] edges) {
-        List<Integer>[] graph= buildGraph(n, edges);
+        List<Integer>[] graph = buildGraph(n, edges);
         int result = 0;
         boolean[] visited = new boolean[n];
         // Step2:遍历每一个顶点，对每一个顶点执行一次广度优先遍历，注意：在遍历的过程中使用 visited 布尔数组记录已经遍历过的结点。
         for (int i = 0; i < n; i++) {
-            if (visited[i]!=true){
+            if (!visited[i]) {
                 bfs(graph, i, visited);
-                result ++;
+                result++;
             }
         }
         return result;
     }
 
     // Step1: adjacent list，构造邻接表，列表数组List[]，表示的无向图
-    public List<Integer>[] buildGraph(int n, int[][] edges){
+    public List<Integer>[] buildGraph(int n, int[][] edges) {
         // LinkedList<Node>[]  adj = new LinkedList<Node>[n];
         /*
         [1,3,5,6]  // LinkedList<Node>
@@ -28,12 +28,12 @@ public class GraphConnectLine323 {
         [3,4,5]
         [5,6]
          */
-        LinkedList<Integer>[]  adj = new LinkedList[n];
+        LinkedList<Integer>[] adj = new LinkedList[n];
         // adj[0] adj[1] adj[2] adj[3] adj[4]
         for (int i = 0; i < n; i++) {
             adj[i] = new LinkedList<Integer>();
         }
-        for (int[] edge: edges) {
+        for (int[] edge : edges) {
             adj[edge[0]].add(edge[1]);
             adj[edge[1]].add(edge[0]);
         }
@@ -66,7 +66,7 @@ public class GraphConnectLine323 {
 
     public static void main(String[] args) {
         GraphConnectLine323 graph = new GraphConnectLine323();
-        int[][] array = {{0,1},{0,2},{2,5},{ 3, 4 },{ 3, 5 }};
+        int[][] array = {{0, 1}, {0, 2}, {2, 5}, {3, 4}, {3, 5}};
         graph.countComponents(6, array);
     }
 }

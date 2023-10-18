@@ -1,13 +1,12 @@
 package com.hashSetAndMap;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MyHashMap {
     private final int MAX_LEN = 100000;             // the amount of buckets
     //private List<Pair<Integer, Integer>>[] map;     // hash map implemented by array
 
-    /** Returns the corresponding bucket index. */
+    /**
+     * Returns the corresponding bucket index.
+     */
     private int getIndex(int key) {
         return key % MAX_LEN;
     }

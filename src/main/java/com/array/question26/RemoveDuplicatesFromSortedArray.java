@@ -10,20 +10,20 @@ public class RemoveDuplicatesFromSortedArray {
     // In-place time Complixity: O(2N) space Complixity: O(1)
     public int removeDuplicates(int[] nums) {
         int count = 1;
-        for(int i = 1; i< nums.length; i++){
+        for (int i = 1; i < nums.length; i++) {
             //if(set.add(nums[i])){
-            if(nums[i] != nums[i-1]){
+            if (nums[i] != nums[i - 1]) {
                 count++;
             }
         }
 
         //set = new HashSet<Integer>();
-        for(int i = 1, j = 1; i < count && j< nums.length; ){
-            if(nums[j] != nums[j-1] /*set.add(nums[j])*/){
-                nums[i]= nums[j];
+        for (int i = 1, j = 1; i < count && j < nums.length; ) {
+            if (nums[j] != nums[j - 1] /*set.add(nums[j])*/) {
+                nums[i] = nums[j];
                 j++;
                 i++;
-            }else{
+            } else {
                 j++;
             }
         }
@@ -47,7 +47,7 @@ public class RemoveDuplicatesFromSortedArray {
 
     public static void main(String[] args) {
         RemoveDuplicatesFromSortedArray removeDuplicates = new RemoveDuplicatesFromSortedArray();
-        int[] array = {0,0,1,1,1,2,2,3,3,4};
+        int[] array = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
         removeDuplicates.removeDuplicates2(array);
         Arrays.stream(array).forEach(value -> System.out.printf(value + ", "));
     }

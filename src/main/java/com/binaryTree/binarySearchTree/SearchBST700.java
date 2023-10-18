@@ -12,13 +12,13 @@ public class SearchBST700 {
     // binary search
     public TreeNode searchBST(TreeNode root, int target) {
         TreeNode cur = root;
-        while (cur != null){
-            if (cur.val ==  target){
+        while (cur != null) {
+            if (cur.val == target) {
                 return cur;
-            }else if (cur.val > target){
+            } else if (cur.val > target) {
                 // search in left subTree
                 cur = cur.left;
-            }else if (cur.val < target){
+            } else if (cur.val < target) {
                 // search in left subTree
                 cur = cur.right;
             }
@@ -28,16 +28,16 @@ public class SearchBST700 {
 
     // recursion
     public TreeNode searchBST2(TreeNode root, int target) {
-        if(root == null){
+        if (root == null) {
             return null;
         }
 
-        if (root.val ==  target){
+        if (root.val == target) {
             return root;
-        }else if (root.val > target){
+        } else if (root.val > target) {
             // search in left subTree
             return searchBST2(root.left, target);
-        }else{
+        } else {
             // search in left subTree
             return searchBST2(root.right, target);
         }
@@ -54,7 +54,7 @@ public class SearchBST700 {
         }
         while (stack.size() != 0) {
             TreeNode tmp = stack.pop();
-            if (tmp.val == target){
+            if (tmp.val == target) {
                 return tmp;
             }
             /*if (tmp.right == null) {

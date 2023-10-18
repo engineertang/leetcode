@@ -7,17 +7,17 @@ import org.junit.Test;
 import java.util.Collections;
 import java.util.List;
 
-/** 
-* PascalTriangle Tester. 
-* 
-* @author donald
-* @since <pre>12/17/2017</pre> 
-* @version 1.0 
-*/ 
-public class PascalTriangleTest {
 /**
-* Method: getRow(int rowIndex)
-*/ 
+ * PascalTriangle Tester.
+ *
+ * @author donald
+ * @version 1.0
+ * @since <pre>12/17/2017</pre>
+ */
+public class PascalTriangleTest {
+    /**
+     * Method: getRow(int rowIndex)
+     */
     @Test
     public void testGetRow() throws Exception {
         PascalTriangle119 p = new PascalTriangle119();

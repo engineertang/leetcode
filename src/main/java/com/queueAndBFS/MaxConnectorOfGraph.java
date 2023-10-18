@@ -70,6 +70,6 @@ public class MaxConnectorOfGraph {
 
     public static void main(String[] args) {
         MaxConnectorOfGraph graph = new MaxConnectorOfGraph();
-        int[][] array = {{0,1},{0,2},{2,5},{ 3, 4 },{ 3, 5 }};
+        int[][] array = {{0, 1}, {0, 2}, {2, 5}, {3, 4}, {3, 5}};
     }
 }

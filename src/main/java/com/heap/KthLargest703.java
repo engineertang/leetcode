@@ -10,7 +10,7 @@ public class KthLargest703 {
         kth = k;
         for (int i = 0; i < nums.length; i++) {
             minHeap.add(nums[i]);
-            if(minHeap.size() > k){
+            if (minHeap.size() > k) {
                 minHeap.poll();
             }
         }
@@ -18,21 +18,21 @@ public class KthLargest703 {
 
     public int add(int val) {
         minHeap.add(val);
-        if(minHeap.size() > kth)
+        if (minHeap.size() > kth)
             minHeap.poll();
 
         return minHeap.peek();
     }
 
     public static void main(String[] args) {
-        int[] array ={4,5,8,2};
+        int[] array = {4, 5, 8, 2};
         KthLargest703 obj = new KthLargest703(3, array);
 
         int param_1 = obj.add(3);
         System.out.println(param_1);
-         param_1 = obj.add(5);
+        param_1 = obj.add(5);
         System.out.println(param_1);
-         param_1 = obj.add(10);
+        param_1 = obj.add(10);
         System.out.println(param_1);
 
     }

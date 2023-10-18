@@ -9,7 +9,7 @@ public class LevelorderTraversal102 {
     public List<List<Integer>> levelOrder(TreeNode p) {
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         List<List<Integer>> result = new LinkedList<>();
-        if (p == null){
+        if (p == null) {
             return result;
         }
 
@@ -19,7 +19,7 @@ public class LevelorderTraversal102 {
             int levelCount = queue.size();
             LinkedList<Integer> list = new LinkedList();
 
-            while(levelCount > 0){
+            while (levelCount > 0) {
                 TreeNode current = queue.remove();
                 list.add(current.val);
 
@@ -30,7 +30,7 @@ public class LevelorderTraversal102 {
                     queue.add(current.right);
                 }
 
-                levelCount --;
+                levelCount--;
             }
 
             result.add(list);

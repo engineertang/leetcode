@@ -1,39 +1,58 @@
 # [Heap 堆](https://leetcode.com/explore/featured/card/heap/643/heap/4018/)
+
 ## Priority Queues
+
 ### Definition:
-a priority queue is an abstract data type similar to a regular queue or stack data structure in which each element additionally has a "priority" associated with it. In a priority queue, an element with high priority is served before an element with low priority.  
+
+a priority queue is an abstract data type similar to a regular queue or stack data structure in which each element
+additionally has a "priority" associated with it. In a priority queue, an element with high priority is served before an
+element with low priority.
 
 ### Priority Queues VS Heap
-A priority queue is an abstract data type, while a Heap is a data structure. Therefore, a Heap is not a Priority Queue, but a way to implement a Priority Queue.
+
+A priority queue is an abstract data type, while a Heap is a data structure. Therefore, a Heap is not a Priority Queue,
+but a way to implement a Priority Queue.
 
 ### impletation
+
 array, LinkedList, Heap
 
 ## Heap
+
 ### 1.Definition
-According to Wikipedia, a Heap is a special type of binary tree. A heap is a binary tree that meets the following criteria:
-* 1.Is a complete binary tree;  _in which all the levels are completely filled except possibly the lowest one, which is filled from the left._
+
+According to Wikipedia, a Heap is a special type of binary tree. A heap is a binary tree that meets the following
+criteria:
+
+* 1.Is a complete binary tree;  _in which all the levels are completely filled except possibly the lowest one, which is
+  filled from the left._
 * 2.The value of each node must be no greater than (or no less than) the value of its child nodes.
 
 ### 2.properties:
+
 * Insertion of an element into the Heap has a time complexity of O(\log N)O(logN);
 * Deletion of an element from the Heap has a time complexity of O(\log N)O(logN);
 * The maximum/minimum value in the Heap can be obtained with O(1)O(1) time complexity.
- 
+
 ### 3.Classification of Heap
+
 There are two kinds of heaps: Max Heap and Min Heap.
 
-* 1.Max Heap: Each node in the Heap has a value no less than its child nodes. Therefore, the top element (root node) has the largest value in the Heap.
+* 1.Max Heap: Each node in the Heap has a value no less than its child nodes. Therefore, the top element (root node) has
+  the largest value in the Heap.
 
-* 2.Min Heap: Each node in the Heap has a value no larger than its child nodes. Therefore, the top element (root node) has the smallest value in the Heap.
+* 2.Min Heap: Each node in the Heap has a value no larger than its child nodes. Therefore, the top element (root node)
+  has the smallest value in the Heap.
 
 ### 4. Operation
+
 * Insertion
 
 
 * Deletion
 
 ### 5. Impletation
+
 ```java
 public class MinHeap {
     // Create a complete binary tree using an array
@@ -164,7 +183,7 @@ public class MinHeap {
         minHeap.add(1);
         minHeap.add(2);
         // [1,3,2]
-        System.out.println(minHeap.toString());
+        System.out.println(minHeap);
         // 1
         System.out.println(minHeap.peek());
         // 1
@@ -175,7 +194,5 @@ public class MinHeap {
         // Add too many elements
         minHeap.add(5);
         // [2,3,4]
-        System.out.println(minHeap.toString());
-    }
-}
+        System.out.println(minHea
 ```

@@ -5,7 +5,12 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Properties;
+import java.util.Queue;
+import java.util.Set;
 
 public class ContainsDuplicate217 {
     public boolean containsDuplicate(int[] nums) {
@@ -18,11 +23,12 @@ public class ContainsDuplicate217 {
         return false;
     }
 
-    /**Question 219. Contains Duplicate II
-    *       linear loop,  save a changing temp queue which arrange is [cur, cur+k] around current index cur;
-    *       Queue<Integer> queue
-    *    3  5  6  8  2  1  0
-    */
+    /**
+     * Question 219. Contains Duplicate II
+     * linear loop,  save a changing temp queue which arrange is [cur, cur+k] around current index cur;
+     * Queue<Integer> queue
+     * 3  5  6  8  2  1  0
+     */
     public boolean containsNearbyDuplicate(int[] nums, int k) {
         Set<Integer> set = new HashSet<>();
 
@@ -33,14 +39,13 @@ public class ContainsDuplicate217 {
             if (!set.add(nums[i]))
                 return true;
         }
-        ;
 
         return false;
     }
 
     /**
      * 有数据量大时，时间超时
-      */
+     */
     public boolean containsNearbyDuplicate2(int[] nums, int k) {
         Queue<Integer> queue = new LinkedList<Integer>();
         for (int i = 0; (i <= k) && (i < nums.length); i++) {
@@ -61,7 +66,6 @@ public class ContainsDuplicate217 {
             if (single)
                 return true;
         }
-        ;
 
         return false;
     }

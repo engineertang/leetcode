@@ -130,7 +130,7 @@ public class ReverseList {
         ReverseList reverseList = new ReverseList();
         ListNode result = reverseList.recursionReverseList(a);
         while (result != null) {
-            System.out.println(String.valueOf(result.val));
+            System.out.println(result.val);
             if (result.next != null) {
                 result = result.next;
             } else {

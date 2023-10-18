@@ -1,6 +1,7 @@
 package com.string;
 
-public class Question344 {
+public class ReverseString344 {
+    // reverse in place
     public void reverseString(char[] s) {
         int left = 0;
         int right = s.length - 1;
@@ -23,9 +24,7 @@ public class Question344 {
         }
         System.out.printf(stringBuffer.toString());
 
-        for (int i = 0; i < s.length; i++) {
-            s[i] = chars[i];
-        }
+        System.arraycopy(chars, 0, s, 0, s.length);
     }
 
     public void helper(int index, char[] s, char[] chars) {

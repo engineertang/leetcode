@@ -1,6 +1,9 @@
 package com.array.question15;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 
@@ -24,7 +27,7 @@ public class SumOf3 {
                     break;
                 }
                 if (nums[i] + nums[j] == 0 && nums[j + 1] == 0) {
-                    result.add(Arrays.asList(new Integer[]{nums[i], nums[j], nums[j + 1]}));
+                    result.add(Arrays.asList(nums[i], nums[j], nums[j + 1]));
                     break;
                 }
                 for (int k = nums.length - 1; k > j; k--) {
@@ -32,7 +35,7 @@ public class SumOf3 {
                         break;
                     }
                     if (nums[i] + nums[j] + nums[k] == 0) {
-                        result.add(Arrays.asList(new Integer[]{nums[i], nums[j], nums[k]}));
+                        result.add(Arrays.asList(nums[i], nums[j], nums[k]));
                         break;
                     }
                 }

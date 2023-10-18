@@ -1,6 +1,10 @@
 package com.binaryTree;
 
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.List;
 
 // question 145
 public class PostorderTraversal {
@@ -16,6 +20,7 @@ public class PostorderTraversal {
     }
 
     // method 2: linear 遍历
+
     /**
      * pre-order traversal is root-left-right, and post order is left-right-root.
      * modify the code for pre-order to make it root-right-left, and then reverse the output so that we can get left-right-root .
@@ -36,7 +41,7 @@ public class PostorderTraversal {
                 stack.push(cur);
                 result.addFirst(cur.val);  // Reverse the process of preorder
                 cur = cur.right;             // Reverse the process of preorder
-            } else  if (cur == null){
+            } else if (cur == null) {
                 TreeNode node = stack.pop();
                 cur = node.left;           // Reverse the process of preorder
             }
@@ -48,18 +53,18 @@ public class PostorderTraversal {
     public List<Integer> postorderTraversal3(TreeNode root) {// 中右左 -- 反转 -- 左中右
         Deque<TreeNode> stack = new LinkedList<TreeNode>();
         LinkedList<Integer> result = new LinkedList<>();
-        if (root == null){
+        if (root == null) {
             return result;
         }
         stack.push(root);
-        while (stack.size() != 0){
+        while (stack.size() != 0) {
             TreeNode cur = stack.pop();
             result.addFirst(cur.val);
 
-            if (cur.left != null){
+            if (cur.left != null) {
                 stack.push(cur.left);
             }
-            if (cur.right != null){
+            if (cur.right != null) {
                 stack.push(cur.right);
             }
         }

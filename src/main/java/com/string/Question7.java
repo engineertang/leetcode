@@ -21,9 +21,8 @@ public class Question7 {
             result = result * 10 + array[j++];
         } while (j < i);
 
-        Arrays.stream(array).forEach(value -> System.out.println(value));
+        Arrays.stream(array).forEach(System.out::println);
         System.out.printf(Integer.toString(result));
-
 
         return result;
     }

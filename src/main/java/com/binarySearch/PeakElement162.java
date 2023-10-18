@@ -44,16 +44,16 @@ public class PeakElement162 {
 
     // binary search template 2  O(log n)  applied to middle point need to compare with neighboring point
     public int findPeakElement2(int[] nums) {
-        if(nums.length == 1){
+        if (nums.length == 1) {
             return 0;
         }
         int left = 0, right = nums.length - 1;
         // left middle right
         while (left < right) {
-            int middle = left + (right-left)/2;
-            if(nums[middle] < nums[middle + 1]){
+            int middle = left + (right - left) / 2;
+            if (nums[middle] < nums[middle + 1]) {
                 left = middle + 1;   // middle + 1 is more likely to be target than middle
-            }else if(nums[middle] > nums[middle + 1]){
+            } else if (nums[middle] > nums[middle + 1]) {
                 right = middle; // not substract -1, middle probably is target
             }
         }

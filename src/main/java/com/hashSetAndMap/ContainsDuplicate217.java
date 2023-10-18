@@ -8,7 +8,7 @@ public class ContainsDuplicate217 {
         for (int i = 0; i < nums.length; i++) {
             if (set.contains(nums[i])) {
                 return true;
-            }else {
+            } else {
                 set.add(nums[i]);
             }
         }
