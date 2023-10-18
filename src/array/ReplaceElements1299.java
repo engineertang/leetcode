@@ -1,6 +1,6 @@
 package array;
 
-public class Question1299 {
+public class ReplaceElements1299 {
     // [17,18,5,4,6,1]
     // [18,6,6,6,1,-1]
     public int[] replaceElements(int[] arr) {

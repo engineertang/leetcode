@@ -2,13 +2,13 @@ package array;
 
 import java.util.Arrays;
 
-public class Question88 {
+public class MergeSortedArray88 {
     public static void main(String[] args) {
         /*String[] array = {"latte", "capuccino", "ice-american","mocha", "flat-white"};
         String s = array[0];
         //array[5] = "espresso";
         Arrays.stream(array).forEach(value -> System.out.println(value));*/
-        Question88 arrayLibrary = new Question88();
+        MergeSortedArray88 arrayLibrary = new MergeSortedArray88();
 //        int[] original = new int[]{1, 0, 2, 3, 0, 0} ;
 //        arrayLibrary.duplicateZeros(original);
 //        Arrays.stream(original).forEach(value -> System.out.println(value));

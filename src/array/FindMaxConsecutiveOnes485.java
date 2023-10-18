@@ -5,7 +5,7 @@ import org.junit.Assert;
 /**
  *
  */
-public class Question485 {
+public class FindMaxConsecutiveOnes485 {
     // question 485
     public int findMaxConsecutiveOnes(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
@@ -24,7 +24,7 @@ public class Question485 {
 
     public static void main(String[] args) {
         int[] nums = {1, 1, 0, 1, 1, 1};
-        Question485 instance = new Question485();
+        FindMaxConsecutiveOnes485 instance = new FindMaxConsecutiveOnes485();
         int result = instance.findMaxConsecutiveOnes(nums);
         Assert.assertEquals(result, 3);
 

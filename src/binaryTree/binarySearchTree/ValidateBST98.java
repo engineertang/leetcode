@@ -15,4 +15,10 @@ public class ValidateBST98 {
         if (root.val >= maxVal || root.val <= minVal) return false;
         return isValidBST(root.left, minVal, root.val) && isValidBST(root.right, root.val, maxVal);
     }
+
+    public static void main(String[] args) {
+        ValidateBST98 test = new ValidateBST98();
+        TreeNode treeNode = new TreeNode();
+        test.isValidBST(treeNode);
+    }
 }

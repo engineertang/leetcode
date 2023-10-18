@@ -1,6 +1,5 @@
 package array;
 
-import com.oracle.tools.packager.IOUtils;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -8,7 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
 
-public class Question217 {
+public class ContainsDuplicate217 {
     public boolean containsDuplicate(int[] nums) {
         //先排序，后比较，前一个数是否和后一个相等
         Arrays.sort(nums);
@@ -80,7 +79,7 @@ public class Question217 {
         //int[] array = Arrays.stream(strings).mapToInt(value -> Integer.parseInt(value)).toArray();
         int[] array = {1, 2, 3, 1, 2, 3};
 
-        Question217 question217 = new Question217();
-        System.out.println(question217.containsNearbyDuplicate(array, 2));
+        ContainsDuplicate217 containsDuplicate217 = new ContainsDuplicate217();
+        System.out.println(containsDuplicate217.containsNearbyDuplicate(array, 2));
     }
 }

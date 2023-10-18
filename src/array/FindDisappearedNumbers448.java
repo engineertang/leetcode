@@ -1,10 +1,8 @@
 package array;
 
 import java.util.*;
-import java.util.function.IntConsumer;
-import java.util.stream.Collectors;
 
-public class Question448 {
+public class FindDisappearedNumbers448 {
     public List<Integer> findDisappearedNumbers(int[] nums) {
         // 1. extra space saving all numbers from 1 to n, linear tranverse nums, remove each from extra space, remaining number is answer
         //      add 比 remove省时，set装了全部数，linear loop from 1 to n, 在set进行是否包含判断，包含就跳过，不包含就记录
@@ -25,8 +23,8 @@ public class Question448 {
 
     public static void main(String[] args) {
         int[] array = {4, 3, 2, 7, 8, 2, 3, 1};
-        Question448 question448 = new Question448();
-        List list = question448.findDisappearedNumbers(array);
+        FindDisappearedNumbers448 findDisappearedNumbers448 = new FindDisappearedNumbers448();
+        List list = findDisappearedNumbers448.findDisappearedNumbers(array);
         list.forEach(value -> System.out.println(value + " ,"));
     }
 }

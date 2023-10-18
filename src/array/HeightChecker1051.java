@@ -2,7 +2,7 @@ package array;
 
 import java.util.Arrays;
 
-public class question1051 {
+public class HeightChecker1051 {
     //Build the correct order of heights by sorting another array,
     // then compare the two arrays.
     public int heightChecker(int[] heights) {

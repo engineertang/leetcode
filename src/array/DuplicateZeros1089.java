@@ -2,7 +2,7 @@ package array;
 
 import java.util.Arrays;
 
-public class Question1089 {
+public class DuplicateZeros1089 {
     public void duplicateZeros(int[] arr) {
         //Two pass, O(1) space
         // [1,0,2,3,0,4,5,0]
@@ -45,7 +45,7 @@ public class Question1089 {
     }
 
     public static void main(String[] args) {
-        Question1089 question1089 = new Question1089();
+        DuplicateZeros1089 question1089 = new DuplicateZeros1089();
         int[] array = {8, 4, 5, 0, 0, 0, 0, 7};
         // 8,4,5,0,0,0,0,7
         // 8,4,5,0,0,0,0,0,0,0,0,7

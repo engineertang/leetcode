@@ -1,11 +1,11 @@
-package array.question169;
+package array;
 
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class MajorityElement {
+public class MajorityElement169 {
     public int majorityElement(int[] nums) {
         Map<Integer, Integer> map = new HashMap();
         for (int i : nums) {

@@ -2,7 +2,7 @@ package array;
 
 import java.util.Arrays;
 
-public class Question414 {
+public class ThirdMax414 {
     public static int thirdMax(int[] nums) {
         Arrays.sort(nums);
         int maximum = nums[nums.length - 1];

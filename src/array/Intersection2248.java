@@ -2,7 +2,7 @@ package array;
 
 import java.util.*;
 
-public class Question2248 {
+public class Intersection2248 {
     public List<Integer> intersection(int[][] nums) {
         Map<Integer, Integer> map = new HashMap<>();
         List<Integer> result = new ArrayList<>();
@@ -33,7 +33,7 @@ public class Question2248 {
     }
 
     public static void main(String[] args) {
-        Question2248 question2248 = new Question2248();
+        Intersection2248 question2248 = new Intersection2248();
 
         int test = 500;
         Map<Integer, Integer> map = new HashMap<>();

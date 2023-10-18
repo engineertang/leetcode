@@ -2,7 +2,7 @@ package array;
 
 import java.util.Arrays;
 
-public class Question905 {
+public class SortArrayByParity905 {
     public int[] sortArrayByParity(int[] nums) {
         /**
          * 从i=0开始循环，直到i==right,或left == right
@@ -65,9 +65,9 @@ public class Question905 {
     }
 
     public static void main(String[] args) {
-        Question905 question905 = new Question905();
+        SortArrayByParity905 sortArrayByParity905 = new SortArrayByParity905();
         int[] array = {3, 1, 2, 4};
-        question905.sortArrayByParity3(array);
+        sortArrayByParity905.sortArrayByParity3(array);
         Arrays.stream(array).forEach(value -> System.out.printf(value + ", "));
     }
 
