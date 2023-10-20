@@ -3,7 +3,7 @@ package com.string;
 import java.util.Arrays;
 import java.util.List;
 
-public class Question7 {
+public class Reverse7 {
     public int reverse(int x) {
         int[] array = new int[10];
         int i = 0;
@@ -45,7 +45,7 @@ public class Question7 {
     }
 
     public static void main(String[] args) {
-        Question7 question7 = new Question7();
-        question7.reverse(123);
+        Reverse7 reverse7 = new Reverse7();
+        reverse7.reverse(123);
     }
 }

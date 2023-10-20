@@ -1,4 +1,4 @@
-package com.linkedList.question2;
+package com.linkedList;
 
 import com.linkedList.ListNode;
 
@@ -6,7 +6,7 @@ import com.linkedList.ListNode;
  * Created by Administrator on 2017/12/6.
  * 链表相加 question
  */
-public class LinkedList {
+public class AddTwoSum2 {
     public ListNode addTwoSum(ListNode p, ListNode q) {
         ListNode resultNode = new ListNode(0);
 
