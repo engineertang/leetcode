@@ -7,8 +7,8 @@ import java.util.List;
 
 // 所有可能的路径
 public class AllPathsSourceTarget797 {
-    List<List<Integer>> ans = new ArrayList<List<Integer>>();
-    Deque<Integer> stack = new ArrayDeque<Integer>();
+    List<List<Integer>> ans = new ArrayList<>();
+    Deque<Integer> stack = new ArrayDeque<>();
 
     public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
         stack.offerLast(0);
